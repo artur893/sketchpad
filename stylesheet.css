@@ -27,3 +27,8 @@ body {
 .onMouseMove {
     background-color: red;
 }
+
+#reset {
+    border-radius: 10px;
+
+}

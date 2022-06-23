@@ -27,4 +27,9 @@ function changeSize(value) {
     }
 }
 
+const reset = document.getElementById("reset")
+reset.addEventListener("click", () => {
+    changeSize(64)
+})
+
 
