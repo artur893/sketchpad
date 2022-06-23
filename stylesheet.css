@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(41, 41, 41);
+}
+
+.container {
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.board {
+    width: 500px;
+    height: 500px;
+    background-color: burlywood;
+    display: grid;
+    gap: 0;
+}
+
+.block {
+    border: solid 1px;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.onMouseMove {
+    background-color: red;
+}
