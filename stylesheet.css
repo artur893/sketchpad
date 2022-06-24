@@ -1,5 +1,14 @@
 body {
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(73, 56, 41);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 80px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(219, 202, 105);
+    margin-left: 80px;
 }
 
 .container {
@@ -7,6 +16,22 @@ body {
     height: 700px;
     margin: auto;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .board {
@@ -15,6 +40,8 @@ body {
     background-color: burlywood;
     display: grid;
     gap: 0;
+    border: solid 1px;
+    flex-shrink: 0;
 }
 
 .block {
@@ -29,6 +56,52 @@ body {
 }
 
 #reset {
-    border-radius: 10px;
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(219, 202, 105);
+}
 
+#black {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(219, 202, 105);
+}
+
+#color {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(219, 202, 105);
+}
+
+#rainbow {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(219, 202, 105);
+}
+
+#eraser {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(219, 202, 105);
+}
+
+.button {
+    font-size: 14px;
+    font-family:'Courier New', Courier, monospace;
+    margin: 1px;
+    border: solid 1px black;
+}
+
+.functionButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.changeSize {
+    margin-left: 305px;
 }

@@ -6,7 +6,7 @@ function createBoard(size) {
     for (i = 0; i < size * size; i++) {
         const block = document.createElement("div")
         block.classList.add("block")
-        block.style.backgroundColor = "green"
+        block.style.backgroundColor = "rgb(169, 161, 140)"
         board.appendChild(block)
         block.addEventListener("mouseover", () => {
             block.style.backgroundColor = "red"

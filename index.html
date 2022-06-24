@@ -12,19 +12,27 @@
 
 <body>
     <div class="container">
-        <div class="title">Sketcher!</div>
+        <div class="title">
+            <h1>Etch-a-sketch</h1>
+        </div>
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button class="black">BLACK</button>
-                <button class="color">COLOR</button>
-                <button class="rainbow">RAINBOW</button>
-                <button id="reset">NEW BOARD 64x64</button>
+                <div class="functionButtons">
+                    <button class="button" id="black">BLACK</button>
+                    <button class="button" id="color">COLOR</button>
+                    <button class="button" id="rainbow">RAINBOW</button>
+                    <button class="button" id="eraser">ERASER</button>
+                </div>
+                <div class="newBoard"><button class="button" id="reset">NEW BOARD 64x64</button></div>
             </div>
             <div>
+
+            </div>
+        </div>
+        <div class="changeSize">
             <input type="text" placeholder="Size of board" value="" onchange="changeSize(value)">
             <button>Change size</button>
-        </div>
         </div>
     </div>
 
