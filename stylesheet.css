@@ -45,7 +45,7 @@ h1 {
 }
 
 .block {
-    border: solid 1px;
+    border: solid 0px;
     margin: 0;
     padding: 0;
     gap: 0;
@@ -55,53 +55,38 @@ h1 {
     background-color: red;
 }
 
-#reset {
-    border-radius: 100%;
-    height: 80px;
-    width: 80px;
-    background-color: rgb(219, 202, 105);
-}
-
-#black {
-    border-radius: 100%;
-    height: 80px;
-    width: 80px;
-    background-color: rgb(219, 202, 105);
-}
-
-#color {
-    border-radius: 100%;
-    height: 80px;
-    width: 80px;
-    background-color: rgb(219, 202, 105);
-}
-
-#rainbow {
-    border-radius: 100%;
-    height: 80px;
-    width: 80px;
-    background-color: rgb(219, 202, 105);
-}
-
-#eraser {
-    border-radius: 100%;
-    height: 80px;
-    width: 80px;
-    background-color: rgb(219, 202, 105);
-}
 
 .button {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
     font-size: 14px;
     font-family:'Courier New', Courier, monospace;
     margin: 1px;
     border: solid 1px black;
+    transition: all 0.5s;
+    border-radius: 100%;
+    background-color: rgb(219, 202, 105);
+    margin: 5px;
 }
 
 .functionButtons {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .changeSize {
     margin-left: 305px;
+}
+
+#colorPicker {
+    height: 70px;
+    width: 70px;
+}
+
+.translated {
+    transform: scale(1.1);
+    background-color: rgb(213, 217, 0);
 }

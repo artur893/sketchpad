@@ -1,4 +1,39 @@
 const board = document.querySelector(".board")
+const button = document.querySelectorAll("button")
+
+console.log(button)
+
+button[0].addEventListener("mouseover", () => {
+    button[0].classList.add("translated")
+})
+
+button[0].addEventListener("mouseout", () => {
+    button[0].classList.remove("translated")
+})
+
+button[1].addEventListener("mouseover", () => {
+    button[1].classList.add("translated")
+})
+
+button[1].addEventListener("mouseout", () => {
+    button[1].classList.remove("translated")
+})
+
+button[2].addEventListener("mouseover", () => {
+    button[2].classList.add("translated")
+})
+
+button[2].addEventListener("mouseout", () => {
+    button[2].classList.remove("translated")
+})
+
+button[3].addEventListener("mouseover", () => {
+    button[3].classList.add("translated")
+})
+
+button[3].addEventListener("mouseout", () => {
+    button[3].classList.remove("translated")
+})
 
 function createBoard(size) {
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`
