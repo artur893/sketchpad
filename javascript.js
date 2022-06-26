@@ -85,7 +85,7 @@ function changeColor(e) {
 
     }
     else if (currentMode === "eraser") {
-        e.target.style.backgroundColor = "rgb(169, 161, 140)"
+        e.target.style.backgroundColor = "rgb(256, 256, 256)"
     }
 }
 
@@ -96,7 +96,7 @@ function createBoard(size) {
     for (i = 0; i < size * size; i++) {
         const block = document.createElement("div")
         block.classList.add("block")
-        block.style.backgroundColor = "rgb(169, 161, 140)"
+        block.style.backgroundColor = "rgb(256, 256, 256)"
         board.appendChild(block)
         block.addEventListener("mouseover", changeColor)
     }
