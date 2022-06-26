@@ -41,32 +41,53 @@ button[0].addEventListener("click", () => {
     button[0].classList.add("clicked")
     button[1].classList.remove("clicked")
     button[2].classList.remove("clicked")
+    currentMode = "color"
 })
 
 button[1].addEventListener("click", () => {
     button[1].classList.add("clicked")
     button[0].classList.remove("clicked")
     button[2].classList.remove("clicked")
+    currentMode = "rainbow"
 })
 
 button[2].addEventListener("click", () => {
     button[2].classList.add("clicked")
     button[0].classList.remove("clicked")
     button[1].classList.remove("clicked")
+    currentMode = "eraser"
 })
 
 
 
 
-//setting color
+//setting color and mode
 let currentColor = "black"
 let newColor
+let currentMode = "color"
 
 function setCurrentColor(newColor) {
     currentColor = newColor
 }
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+
+function changeColor(e) {
+    if (currentMode === "color") {
+        e.target.style.backgroundColor = currentColor
+    }
+
+    else if (currentMode === "rainbow") {
+        const randomR = Math.floor(Math.random() * 256)
+        const randomG = Math.floor(Math.random() * 256)
+        const randomB = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+
+    }
+    else if (currentMode === "eraser") {
+        e.target.style.backgroundColor = "rgb(169, 161, 140)"
+    }
+}
 
 //coloring & creating blocks
 function createBoard(size) {
@@ -77,9 +98,7 @@ function createBoard(size) {
         block.classList.add("block")
         block.style.backgroundColor = "rgb(169, 161, 140)"
         board.appendChild(block)
-        block.addEventListener("mouseover", () => {
-            block.style.backgroundColor = currentColor
-        })
+        block.addEventListener("mouseover", changeColor)
     }
 }
 
@@ -93,7 +112,7 @@ function changeSize(value) {
         createBoard(value)
     }
     else {
-        alert("ERROR! Input should be betwen 2 and 100")
+        alert("Input should be betwen 2 and 100")
     }
 }
 
